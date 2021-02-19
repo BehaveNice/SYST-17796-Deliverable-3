@@ -42,4 +42,4 @@ Note that the base code is similar to but not identical to the CardTrick code us
 
 Student Version
 
-Finally, complete the Design Document Template for the current base code AND your chosen game andintegrate it into your submission
+Finally, complete the Design Document Template for the current base code AND your chosen game and integrate it into your submission
