@@ -7,7 +7,9 @@ WINTER 2020
 Deliverable 1
 
 Ken Florencio
+
 Shankar Ganesh
+
 Ismael Marquez Jimenez - 991627630
 
 DESCRIPTION:
