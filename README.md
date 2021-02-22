@@ -4,9 +4,11 @@ SYST 17796  Deliverable 1
 
 WINTER 2020
 
-SYST 17796
-
 Deliverable 1
+
+Ken Florencio
+Shankar Ganesh
+Ismael Marquez Jimenez - 991627630
 
 DESCRIPTION:
 Using the given base code which depicts a basic card game, form a group of up to 4 students from your section and review the base code provided. You will find that it depicts the building blocks of a card game. 
