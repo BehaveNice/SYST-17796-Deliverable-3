@@ -8,7 +8,7 @@ Deliverable 1
 
 Ken Florencio          - 991547422
 
-Shankar Ganesh
+Shankar Ganesh         - 991473537
 
 Ismael Marquez Jimenez - 991627630
 
