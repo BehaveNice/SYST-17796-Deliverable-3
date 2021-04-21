@@ -21,21 +21,24 @@ public class Card {
     /**
      * @return the suit
      */
-    public String getSuit() {
+    public String getSuit()
+    {
         return suit;
     }
 
     /**
      * @param suit the suit to set
      */
-    public void setSuit(String suit) {
+    public void setSuit(String suit)
+    {
         this.suit = suit;
     }
 
     /**
      * @return the value
      */
-    public int getValue() {
+    public int getValue()
+    {
         return value;
     }
 
