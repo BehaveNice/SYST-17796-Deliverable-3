@@ -3,19 +3,23 @@
  * Students can modify and extend to implement their game.
  * Add your name as a modifier and the date!
  */
+
 package ca.sheridancollege.project;
 
-import java.util.ArrayList;
+import java.util.*;
 
 /**
  * The class that models your game. You should create a more specific
  * child of this class and instantiate the methods given.
  * @author dancye, 2018
  */
-public abstract class Game 
+
+public class Game
 {
+
     private final String gameName;//the title of the game
     private ArrayList <Player> players;// the players of the game
+
     
     public Game(String givenName)
     {
@@ -26,7 +30,7 @@ public abstract class Game
     /**
      * @return the gameName
      */
-    public String getGameName() 
+    public String getGameName()
     {
         return gameName;
     }
@@ -46,19 +50,21 @@ public abstract class Game
     {
         this.players = players;
     }
-    
+
     /**
      * Play the game. This might be one method or many method calls depending
      * on your game.
      */
-    public abstract void play();
-    
+    public String play() {
+        return "Game has started!";
+    }
+
     /**
      * When the game is over, use this method to declare and display a winning
      * player.
      */
-    public abstract void declareWinner();
+    public String declareWinner() {
+        return "Game is over";
+    }
 
-   
-    
 }//end class

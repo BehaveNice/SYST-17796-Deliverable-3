@@ -11,16 +11,39 @@ package ca.sheridancollege.project;
  * should remember to add themselves as a modifier.
  * @author dancye, 2018
  */
-public abstract class Card 
-{
-    //default modifier for child classes
-    
+public class Card {
+
+    private String suit; //clubs, spades, diamonds, hearts
+    private int value;//1-13
+
+    public static final String [] SUITS = {"Hearts", "Diamonds", "Spades", "Clubs"};
+
     /**
-     * Students should implement this method for their specific children classes 
-     * @return a String representation of a card. Could be an UNO card, a regular playing card etc.
+     * @return the suit
      */
-    
-    @Override
-    public abstract String toString();
-    
+    public String getSuit() {
+        return suit;
+    }
+
+    /**
+     * @param suit the suit to set
+     */
+    public void setSuit(String suit) {
+        this.suit = suit;
+    }
+
+    /**
+     * @return the value
+     */
+    public int getValue() {
+        return value;
+    }
+
+    /**
+     * @param value the value to set
+     */
+    public void setValue(int value) {
+        this.value = value;
+    }
+
 }
