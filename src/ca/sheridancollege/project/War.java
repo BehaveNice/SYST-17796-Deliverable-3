@@ -36,15 +36,17 @@ public class War
         GroupOfCards playerOneCardGroup = new GroupOfCards(playerOneCards, 26);
         GroupOfCards playerTwoCardGroup = new GroupOfCards(playerTwoCards, 26);
 
-        System.out.println(gameCardGroup.getSize());
-
         gameCardGroup.setGroupOfCards(gameCards, gameCardGroup.getSize());
 
         gameCardGroup.shuffle();
 
-        System.out.println(gameCardGroup.showCards(gameCards));
+        playerOneCardGroup.distributeCards(playerOneCards, playerTwoCards, gameCards, 26);
+        playerTwoCardGroup.distributeCards(playerTwoCards, playerOneCards, gameCards, 26);
 
-        playerOneCardGroup.distributeCards(playerOneCards, gameCards, 26);
+        for (Card cards : playerOneCardGroup.showCards())
+        {
+            System.out.println(cards.getValue() + " of " + cards.getSuit());
+        }
 
 
     }

@@ -32,16 +32,16 @@ public class GroupOfCards
         for(int i = 0; i < givenSize; i++)
         {
             cards.add(new Card(Card.SUITS[(int)(Math.random()*4)], (int)Math.random()*13+4));
-            System.out.println(cards);
         }
         return cards;
     }
 
-    public void distributeCards(ArrayList<Card> userCards, ArrayList<Card> deckCards, int givenSize)
+    public void distributeCards(ArrayList<Card> playerOneCards, ArrayList<Card> playerTwoCards, ArrayList<Card> deckCards, int givenSize)
     {
         for(int i = 0; i < givenSize; i++)
         {
-
+            playerOneCards.add(deckCards.get(i));
+            playerTwoCards.add(deckCards.get(i + 25));
         }
     }
     
@@ -49,7 +49,7 @@ public class GroupOfCards
      * A method that will get the group of cards as an ArrayList
      * @return the group of cards.
      */
-    public ArrayList<Card> showCards(ArrayList<Card> cards)
+    public ArrayList<Card> showCards()
     {
         return cards;
     }
