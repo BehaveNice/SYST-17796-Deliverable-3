@@ -6,6 +6,7 @@ public class War
 {
     public static void main(String[]args)
     {
+
         Scanner userInput = new Scanner(System.in);
         Game war = new Game("War");
         System.out.println("Welcome to the game of " + war.getGameName());
@@ -22,6 +23,7 @@ public class War
         System.out.println("Welcome " + playerOne.getPlayerID() + "\n");
 
         ArrayList<Player> players = new ArrayList<>();
+
         players.add(playerOne);
         players.add(playerComputer);
         war.setPlayers(players);
@@ -34,21 +36,15 @@ public class War
         GroupOfCards playerOneCardGroup = new GroupOfCards(playerOneCards, 26);
         GroupOfCards playerTwoCardGroup = new GroupOfCards(playerTwoCards, 26);
 
+        System.out.println(gameCardGroup.getSize());
+
         gameCardGroup.setGroupOfCards(gameCards, gameCardGroup.getSize());
-        playerOneCardGroup.setGroupOfCards(playerOneCards, playerOneCardGroup.getSize());
-        playerTwoCardGroup.setGroupOfCards(playerTwoCards, playerTwoCardGroup.getSize());
 
         gameCardGroup.shuffle();
 
+        System.out.println(gameCardGroup.showCards(gameCards));
+
         playerOneCardGroup.distributeCards(playerOneCards, gameCards, 26);
-
-
-
-        System.out.println("Your cards are ");
-        for(int i = 0; i < playerOneCards.size(); i++)
-        {
-            System.out.println(playerOneCardGroup.showCards());
-        }
 
 
     }
