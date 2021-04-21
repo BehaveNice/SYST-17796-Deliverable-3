@@ -19,6 +19,7 @@ public class Game
 
     private final String gameName;//the title of the game
     private ArrayList <Player> players;// the players of the game
+    private String gameDescription;
 
     
     public Game(String givenName)
@@ -33,6 +34,17 @@ public class Game
     public String getGameName()
     {
         return gameName;
+    }
+
+    public String getGameDescription()
+    {
+        return gameDescription;
+    }
+
+    public String setGameDescription()
+    {
+        return gameDescription = "War is a simple card game, played by two players using a standard playing card deck. " +
+                "The objective of the game is to win all of the cards.";
     }
     
      /**
