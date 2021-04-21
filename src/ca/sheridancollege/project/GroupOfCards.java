@@ -31,7 +31,10 @@ public class GroupOfCards
     {
         for(int i = 0; i < givenSize; i++)
         {
-            cards.add(new Card(Card.SUITS[(int)(Math.random()*4)], (int)Math.random()*13+4));
+            Card c = new Card();
+            c.setValue((int)(Math.random()*13+4));
+            c.setSuit(Card.SUITS[(int)(Math.random()*4)]);
+            cards.add(c);
         }
         return cards;
     }

@@ -43,11 +43,14 @@ public class War
         playerOneCardGroup.distributeCards(playerOneCards, playerTwoCards, gameCards, 26);
         playerTwoCardGroup.distributeCards(playerTwoCards, playerOneCards, gameCards, 26);
 
+        System.out.println(playerName +  " your cards are: ");
+
         for (Card cards : playerOneCardGroup.showCards())
         {
             System.out.println(cards.getValue() + " of " + cards.getSuit());
         }
 
 
+        System.out.println("\n" + war.play());
     }
 }

@@ -18,11 +18,6 @@ public class Card
 
     public static final String [] SUITS = {"Hearts", "Diamonds", "Spades", "Clubs"};
 
-    public Card(String suit, int value)
-    {
-        this.suit = suit;
-        this.value = value;
-    }
     /**
      * @return the suit
      */

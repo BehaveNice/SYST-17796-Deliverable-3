@@ -20,6 +20,7 @@ public class Game
     private final String gameName;//the title of the game
     private ArrayList <Player> players;// the players of the game
     private String gameDescription;
+    private boolean isGameOver;
 
     
     public Game(String givenName)
@@ -67,7 +68,9 @@ public class Game
      * Play the game. This might be one method or many method calls depending
      * on your game.
      */
-    public String play() {
+    public String play()
+    {
+        isGameOver = false;
         return "Game has started!";
     }
 
@@ -75,7 +78,9 @@ public class Game
      * When the game is over, use this method to declare and display a winning
      * player.
      */
-    public String declareWinner() {
+    public String declareWinner()
+    {
+        isGameOver = true;
         return "Game is over";
     }
 
