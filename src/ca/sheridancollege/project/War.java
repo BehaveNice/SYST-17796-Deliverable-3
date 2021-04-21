@@ -51,35 +51,45 @@ public class War
         }
 
         System.out.println("\n" + war.play());
-
-
-        for (int i = 0; i < 4; i++)
+        int lowestCardSize = 52;
         {
-            if(playerOneCards.get(i).getValue() > playerTwoCards.get(i).getValue())
+            for (int i = 0; i < lowestCardSize; i++)
             {
-                System.out.println(playerName + " wins this round!");
-                playerOneCards.add(playerTwoCards.get(i));
-                playerTwoCards.remove(i);
-                System.out.println(playerTwoCards.size());
-            }
-            else if(playerOneCards.get(i).getValue() < playerTwoCards.get(i).getValue())
-            {
-                System.out.println(computerPlayer + " wins this round!");
-                playerTwoCards.add(playerOneCards.get(i));
-                playerOneCards.remove(i);
-                System.out.println(playerOneCards.size());
-            }
-            else if(playerOneCards.get(i).getValue() == playerTwoCards.get(i).getValue())
-            {
-                System.out.println("This round is a tie!");
-            }
-            else
-            {
-                System.out.println("No one is the winner");
+                if (playerOneCards.get(i).getValue() > playerTwoCards.get(i).getValue()) {
+                    System.out.println(playerName + " wins this round!");
+                    playerOneCards.add(playerTwoCards.get(i));
+                    playerTwoCards.remove(i);
+
+                    if(playerOneCards.size() > playerTwoCards.size())
+                    {
+                        lowestCardSize = playerTwoCards.size();
+                    }
+                } else if (playerOneCards.get(i).getValue() < playerTwoCards.get(i).getValue()) {
+                    System.out.println(computerPlayer + " wins this round!");
+                    playerTwoCards.add(playerOneCards.get(i));
+                    playerOneCards.remove(i);
+                    if(playerTwoCards.size() > playerOneCardGroup.getSize())
+                    {
+                        lowestCardSize = playerOneCards.size();
+                    }
+                } else if (playerOneCards.get(i).getValue() == playerTwoCards.get(i).getValue()) {
+                    System.out.println("This round is a tie!");
+                } else {
+                    System.out.println("No one is the winner");
+                    break;
+                }
             }
         }
 
-        System.out.println(war.declareWinner());
+        System.out.println("\n" + war.end());
+        if(playerOneCards.size() > playerTwoCards.size())
+        {
+            System.out.println(war.declareWinner(playerName));
+        }
+        else
+        {
+            System.out.println("\n" + war.declareWinner("The " + computerPlayer));
+        }
         System.out.println(playerTwoCards.size());
         System.out.println(playerOneCards.size());
     }

@@ -78,9 +78,14 @@ public class Game
      * When the game is over, use this method to declare and display a winning
      * player.
      */
-    public String declareWinner()
+    public String end()
     {
-        return "Game is over";
+        return "The game is over";
+    }
+
+    public String declareWinner(String winner)
+    {
+        return "The winner is " + winner + "!";
     }
 
 }//end class
