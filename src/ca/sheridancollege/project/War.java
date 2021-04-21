@@ -14,43 +14,40 @@ public class War
         System.out.println("\n" + "Please enter your name: ");
 
         String playerName = userInput.nextLine();
+        String computerPlayer = "Computer";
+
         WarPlayer playerOne = new WarPlayer(playerName);
+        WarPlayer playerComputer = new WarPlayer(computerPlayer);
+
         System.out.println("Welcome " + playerOne.getPlayerID() + "\n");
 
-        Card[] gameCardDeck = new Card[52];
-        Card[] playerOneDeck = new Card[26];
-        Card[] playerTwoDeck = new Card[26];
+        ArrayList<Player> players = new ArrayList<>();
+        players.add(playerOne);
+        players.add(playerComputer);
+        war.setPlayers(players);
 
-        for(int i = 0; i < gameCardDeck.length; i++)
+        ArrayList<Card> gameCards = new ArrayList<>();
+        ArrayList<Card> playerOneCards = new ArrayList<>();
+        ArrayList<Card> playerTwoCards = new ArrayList<>();
+
+        GroupOfCards gameCardGroup = new GroupOfCards(gameCards, 52);
+        GroupOfCards playerOneCardGroup = new GroupOfCards(playerOneCards, 26);
+        GroupOfCards playerTwoCardGroup = new GroupOfCards(playerTwoCards, 26);
+
+        gameCardGroup.setGroupOfCards(gameCards, gameCardGroup.getSize());
+        playerOneCardGroup.setGroupOfCards(playerOneCards, playerOneCardGroup.getSize());
+        playerTwoCardGroup.setGroupOfCards(playerTwoCards, playerTwoCardGroup.getSize());
+
+        gameCardGroup.shuffle();
+
+        playerOneCardGroup.distributeCards(playerOneCards, gameCards, 26);
+
+
+
+        System.out.println("Your cards are ");
+        for(int i = 0; i < playerOneCards.size(); i++)
         {
-            Card c = new Card();
-            c.setValue((int)(Math.random()*13+4));
-            c.setSuit(Card.SUITS[(int)(Math.random()*4)]);
-            gameCardDeck[i] = c;
-        }
-
-        Collections.shuffle(Arrays.asList(gameCardDeck));
-
-        for(int i = 0; i < playerOneDeck.length; i++)
-        {
-             playerOneDeck[i] = gameCardDeck[i];
-        }
-
-        for(int i = 0; i < playerTwoDeck.length; i++)
-        {
-            playerTwoDeck[i] = gameCardDeck[i + 25];
-        }
-
-        System.out.println(playerOne.getPlayerID() + ", your cards are:");
-        for(int i = 0; i < playerOneDeck.length; i++)
-        {
-            System.out.println(playerOneDeck[i].getValue() + " of " + playerOneDeck[i].getSuit());
-        }
-
-        System.out.println();
-        for(int i = 0; i < playerTwoDeck.length; i++)
-        {
-            System.out.println(playerTwoDeck[i].getValue() + " of " + playerTwoDeck[i].getSuit());
+            System.out.println(playerOneCardGroup.showCards());
         }
 
 

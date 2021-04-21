@@ -21,9 +21,30 @@ public class GroupOfCards
     private ArrayList <Card> cards;
     private int size;//the size of the grouping
     
-    public GroupOfCards(int givenSize)
+    public GroupOfCards(ArrayList<Card> givenCardArray, int givenSize)
     {
+        cards = givenCardArray;
         size = givenSize;
+    }
+
+    public void setGroupOfCards(ArrayList<Card> cards, int givenSize)
+    {
+        for(int i = 0; i < givenSize; i++)
+        {
+            Card c = new Card();
+            c.setValue((int)(Math.random()*13+4));
+            c.setSuit(Card.SUITS[(int)(Math.random()*4)]);
+            cards.add(i, c);
+        }
+    }
+
+    public void distributeCards(ArrayList<Card> userCards, ArrayList<Card> deckCards, int givenSize)
+    {
+        for(int i = 0; i < givenSize; i++)
+        {
+            Card c = new Card();
+            userCards.add(i, c);
+        }
     }
     
     /**
