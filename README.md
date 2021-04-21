@@ -1,49 +1,10 @@
-# SYST-17796-Deliverable-1
-SYST 17796  Deliverable 1
+# SYST-17796-Deliverable-3
+SYST 17796  Deliverable 3
 
 
-WINTER 2020
+In Deliverable 2 you committed to a design for your game and you will have received feedback on the design. The first step for Deliverable 3 is to incorporate that feedback so you have a firm UML class diagram of the final game so that you can begin to code. 
+The same standards for groupwork, professional writing style and citations apply to all deliverables. If you have questions, you can refer to the project description or ask your instructor. The project requirements are not to be reduced for groups smaller than 4 students. Any groupwork conflicts will be dealt with using the contract from Deliverable 1.
 
-Deliverable 1
+To begin, you will update your UML Class Diagram, incorporating the feedback you received in Deliverable 2. You should include methods and attributes for each class. 
 
-Ken Florencio          - 991547422
-
-Shankar Ganesh         - 991473537
-
-Ismael Marquez Jimenez - 991627630
-
-DESCRIPTION:
-Using the given base code which depicts a basic card game, form a group of up to 4 students from your section and review the base code provided. You will find that it depicts the building blocks of a card game. 
-There are classes that represent the Cards, the selection of a “hand” and the framework for the playing of the game. As we move through the term you will slowly extend this code base and refactor the code into a card game of your choosing. 
-This means any game that is played with cards is eligible for the project. 
-
-Some ideas are:
-
-Go Fish
-
-War
-
-Uno
-
-Skip-Bo
-
-Spot It
-
-Blackjack
-
-You can also choose a game that is not on the list. 
-More advanced students can choose a game with more difficult logic. 
-There is no graphical user interface required. 
-After you have chosen your group and decided upon a game, complete the Team Contract provided in a separate document and integrate it into your submission. 
-Next, create a Git repository for your project group and store the base code in your repository. 
-It can either be a public repository OR you can get a student license for a private repository through GitHub. 
-You must be willing to add your instructor as a viewer (read-only access) if you choose the private option. 
-The information necessary to access the Git repository will be provided in the Design Document Template. 
-Next, create the UML domain class diagram that correctly depicts the current code. 
-Make sure you use a CASE tool such as Visual Paradigm. 
-
-Note that the base code is similar to but not identical to the CardTrick code used in class.
-
-Student Version
-
-Finally, complete the Design Document Template for the current base code AND your chosen game and integrate it into your submission
+Next, complete the code to satisfy the rules of the game (requirements) and the use cases you defined (scope). Ensure the final version is checked in to your Git repository.
