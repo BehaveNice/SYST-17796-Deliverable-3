@@ -80,7 +80,6 @@ public class Game
      */
     public String declareWinner()
     {
-        isGameOver = true;
         return "Game is over";
     }
 

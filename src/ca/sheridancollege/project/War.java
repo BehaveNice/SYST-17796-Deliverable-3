@@ -50,7 +50,37 @@ public class War
             System.out.println(cards.getValue() + " of " + cards.getSuit());
         }
 
-
         System.out.println("\n" + war.play());
+
+
+        for (int i = 0; i < 4; i++)
+        {
+            if(playerOneCards.get(i).getValue() > playerTwoCards.get(i).getValue())
+            {
+                System.out.println(playerName + " wins this round!");
+                playerOneCards.add(playerTwoCards.get(i));
+                playerTwoCards.remove(i);
+                System.out.println(playerTwoCards.size());
+            }
+            else if(playerOneCards.get(i).getValue() < playerTwoCards.get(i).getValue())
+            {
+                System.out.println(computerPlayer + " wins this round!");
+                playerTwoCards.add(playerOneCards.get(i));
+                playerOneCards.remove(i);
+                System.out.println(playerOneCards.size());
+            }
+            else if(playerOneCards.get(i).getValue() == playerTwoCards.get(i).getValue())
+            {
+                System.out.println("This round is a tie!");
+            }
+            else
+            {
+                System.out.println("No one is the winner");
+            }
+        }
+
+        System.out.println(war.declareWinner());
+        System.out.println(playerTwoCards.size());
+        System.out.println(playerOneCards.size());
     }
 }
