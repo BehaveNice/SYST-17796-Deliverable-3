@@ -19,6 +19,7 @@ public class Game
 
     private final String gameName;//the title of the game
     private ArrayList <Player> players;// the players of the game
+    private final String
 
     
     public Game(String givenName)

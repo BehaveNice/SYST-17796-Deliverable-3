@@ -8,10 +8,9 @@ public class War
     {
         Scanner userInput = new Scanner(System.in);
         Game war = new Game("War");
-        System.out.println();
-        System.out.println("Please enter your name:");
+        System.out.println("Welcome to the game of " + war.getGameName());
+        System.out.println("Please enter your name: ");
         String name = userInput.nextLine();
-        List<Card> playerOneCardDeck = new ArrayList<>();
 
         Card[] gameCardDeck = new Card[26];
         for(int i = 0; i < gameCardDeck.length; i++)
@@ -22,7 +21,8 @@ public class War
             gameCardDeck[i] = c;
         }
         Collections.shuffle(Arrays.asList(gameCardDeck));
-        System.out.println();
+        for(int i = 0; i < gameCardDeck.length; i++)
+        System.out.println(gameCardDeck[i].getValue() + " of " + gameCardDeck[i].getSuit());
 
 
     }
