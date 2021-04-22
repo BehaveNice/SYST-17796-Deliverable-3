@@ -60,12 +60,15 @@ public class War
             {
                 if (playerOneCards.get(i).getValue() > playerTwoCards.get(i).getValue())
                 {
+                    System.out.println("\n" + "----------------------------");
                     System.out.println(gameCardGroup.toString(playerName, playerOneCards.get(i).getValue(), playerOneCards.get(i).getSuit()));
                     System.out.println(gameCardGroup.toString(computerPlayer, playerTwoCards.get(i).getValue(), playerTwoCards.get(i).getSuit()));
                     System.out.println("The " + playerOneCards.get(i).getValue() + " of " + playerOneCards.get(i).getSuit() + " is of higher value!");
                     System.out.println("\n" + playerName + " wins this round!" + "\n");
                     playerOneDeckSize = playerOneDeckSize + 1;
                     playerTwoDeckSize = playerTwoDeckSize - 1;
+                    playerOneCards.add(playerTwoCards.get(i));
+                    playerTwoCards.remove(i);
                     if (playerOneCards.size() > playerTwoCards.size())
                     {
                         lowestCardSize = playerTwoCards.size();
@@ -73,12 +76,15 @@ public class War
                 }
                 else if (playerOneCards.get(i).getValue() < playerTwoCards.get(i).getValue())
                 {
+                    System.out.println("\n" + "----------------------------");
                     System.out.println(gameCardGroup.toString(playerName, playerOneCards.get(i).getValue(), playerOneCards.get(i).getSuit()));
                     System.out.println(gameCardGroup.toString(computerPlayer, playerTwoCards.get(i).getValue(), playerTwoCards.get(i).getSuit()));
                     System.out.println("The " + playerTwoCards.get(i).getValue() + " of " + playerTwoCards.get(i).getSuit() + " is of higher value!");
                     System.out.println("\n" + "The " + computerPlayer + " wins this round!" + "\n");
                     playerTwoDeckSize = playerTwoDeckSize + 1;
                     playerOneDeckSize = playerOneDeckSize - 1;
+                    playerTwoCards.add(playerOneCards.get(i));
+                    playerOneCards.remove(i);
                     if(playerTwoCards.size() > playerOneCardGroup.getSize())
                     {
                         lowestCardSize = playerOneCards.size();
@@ -86,23 +92,21 @@ public class War
                 }
                 else
                 {
-                    System.out.println("This round is a tie!");
+                    System.out.println("----------------------------");
+                    System.out.println("\n" +"This round is a tie!" + "\n");
                 }
             }
 
 
         System.out.println("\n" + war.end());
-        System.out.println(playerName + ", your total deck size is now: " + playerOneDeckSize);
-        System.out.println("The other player, The " + computerPlayer + "'s deck size is now: " + playerTwoDeckSize);
+
         if(playerOneDeckSize > playerTwoDeckSize)
         {
-            System.out.println(war.declareWinner(playerName));
+            System.out.println("\n" + war.declareWinner(playerName));
         }
         else
         {
             System.out.println("\n" + war.declareWinner("The " + computerPlayer));
         }
-        System.out.println(playerTwoCards.size());
-        System.out.println(playerOneCards.size());
     }
 }

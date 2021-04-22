@@ -80,7 +80,7 @@ public class Game
      */
     public String end()
     {
-        return "The game is over";
+        return "The game is over!";
     }
 
     public String declareWinner(String winner)
