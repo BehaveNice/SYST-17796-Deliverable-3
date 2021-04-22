@@ -77,5 +77,10 @@ public class GroupOfCards
     {
         size = givenSize;
     }
+
+    public String toString(String playerName, int cardValue, String cardSuit)
+    {
+        return "The player, " + playerName + "'s card is a " + cardValue + " of " + cardSuit;
+    }
     
 }//end class
