@@ -60,7 +60,7 @@ public class War
             {
                 if (playerOneCards.get(i).getValue() > playerTwoCards.get(i).getValue())
                 {
-                    System.out.println("\n" + "----------------------------");
+                    System.out.println("----------------------------");
                     System.out.println(gameCardGroup.toString(playerName, playerOneCards.get(i).getValue(), playerOneCards.get(i).getSuit()));
                     System.out.println(gameCardGroup.toString(computerPlayer, playerTwoCards.get(i).getValue(), playerTwoCards.get(i).getSuit()));
                     System.out.println("The " + playerOneCards.get(i).getValue() + " of " + playerOneCards.get(i).getSuit() + " is of higher value!");
@@ -76,7 +76,7 @@ public class War
                 }
                 else if (playerOneCards.get(i).getValue() < playerTwoCards.get(i).getValue())
                 {
-                    System.out.println("\n" + "----------------------------");
+                    System.out.println("----------------------------");
                     System.out.println(gameCardGroup.toString(playerName, playerOneCards.get(i).getValue(), playerOneCards.get(i).getSuit()));
                     System.out.println(gameCardGroup.toString(computerPlayer, playerTwoCards.get(i).getValue(), playerTwoCards.get(i).getSuit()));
                     System.out.println("The " + playerTwoCards.get(i).getValue() + " of " + playerTwoCards.get(i).getSuit() + " is of higher value!");
