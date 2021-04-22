@@ -43,13 +43,6 @@ public class War
         playerOneCardGroup.distributeCards(playerOneCards, playerTwoCards, gameCards, 26);
         playerTwoCardGroup.distributeCards(playerTwoCards, playerOneCards, gameCards, 26);
 
-        System.out.println(playerName +  " your cards are: ");
-
-        for (Card cards : playerOneCardGroup.showCards())
-        {
-            System.out.println(cards.getValue() + " of " + cards.getSuit());
-        }
-
         System.out.println("\n" + war.play());
         int lowestCardSize = 52;
         int playerOneDeckSize = 26;
@@ -61,7 +54,7 @@ public class War
                 if (playerOneCards.get(i).getValue() > playerTwoCards.get(i).getValue())
                 {
                     System.out.println("----------------------------");
-                    System.out.println(gameCardGroup.toString(playerName, playerOneCards.get(i).getValue(), playerOneCards.get(i).getSuit()));
+                    System.out.println("\n" + gameCardGroup.toString(playerName, playerOneCards.get(i).getValue(), playerOneCards.get(i).getSuit()));
                     System.out.println(gameCardGroup.toString(computerPlayer, playerTwoCards.get(i).getValue(), playerTwoCards.get(i).getSuit()));
                     System.out.println("The " + playerOneCards.get(i).getValue() + " of " + playerOneCards.get(i).getSuit() + " is of higher value!");
                     System.out.println("\n" + playerName + " wins this round!" + "\n");
@@ -77,7 +70,7 @@ public class War
                 else if (playerOneCards.get(i).getValue() < playerTwoCards.get(i).getValue())
                 {
                     System.out.println("----------------------------");
-                    System.out.println(gameCardGroup.toString(playerName, playerOneCards.get(i).getValue(), playerOneCards.get(i).getSuit()));
+                    System.out.println("\n" + gameCardGroup.toString(playerName, playerOneCards.get(i).getValue(), playerOneCards.get(i).getSuit()));
                     System.out.println(gameCardGroup.toString(computerPlayer, playerTwoCards.get(i).getValue(), playerTwoCards.get(i).getSuit()));
                     System.out.println("The " + playerTwoCards.get(i).getValue() + " of " + playerTwoCards.get(i).getSuit() + " is of higher value!");
                     System.out.println("\n" + "The " + computerPlayer + " wins this round!" + "\n");
