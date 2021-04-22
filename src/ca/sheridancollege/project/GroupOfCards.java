@@ -24,6 +24,7 @@ public class GroupOfCards
     public GroupOfCards(ArrayList<Card> givenCardArray, int givenSize)
     {
         cards = givenCardArray;
+
         size = givenSize;
     }
 
